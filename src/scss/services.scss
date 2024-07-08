@@ -1,0 +1,249 @@
+.services {
+	padding: toRem(130) toRem(0);
+	// .services__container
+
+	&__container {
+	}
+
+	// .services__body
+
+	&__body {
+	}
+
+	// .services__title
+
+	&__title {
+		max-width: toRem(730);
+		margin-bottom: toRem(80);
+	}
+
+	// .services__tabs
+
+	&__tabs {
+	}
+}
+
+.services-tabs {
+	// .services-tabs__navigation
+
+	&__navigation {
+		background: #f4f7fd;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		@media (max-width: 1050px) {
+			grid-template-columns: repeat(3, minmax(200px, 1fr));
+		}
+	}
+
+	// .services-tabs__title
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+
+		border-radius: 20px;
+		line-height: 1.4;
+		text-align: left;
+		padding: toRem(16) toRem(24);
+		color: $secondaryBlackColor;
+		font-weight: 500;
+		@media (min-width: $tablet) {
+			flex: 0 0 20%;
+		}
+		@media (max-width: $mobile) {
+			width: 100%;
+			align-items: center;
+			border: 1px solid rgba(128, 128, 128, 0.293);
+			&::after {
+				content: "";
+				transform: rotate(180deg);
+				background: url("@img/icons/arrow.svg") center no-repeat;
+				display: block;
+				width: 25px;
+				height: 25px;
+				transition: all ease 0.3s;
+			}
+		}
+		&._tab-active {
+			background: $primaryColor;
+			color: $mainWhiteColor;
+			&::after {
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	// .services-tabs__content
+
+	&__content {
+		@media (max-width: $mobile) {
+			background: #f4f7fd;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	// .services-tabs__body
+
+	&__body {
+		font-size: toRem(14);
+		line-height: 1.4;
+		font-family: Roboto;
+	}
+	// .services-tabs__wrapper
+
+	&__wrapper {
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+	}
+
+	// .services-tabs__columns
+
+	&__columns {
+		padding: toRem(24);
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+		gap: toRem(24);
+		justify-content: space-between;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+			flex: 1 1 auto;
+		}
+	}
+
+	// .services-tabs__column
+
+	&__column {
+	}
+
+	// .services-tabs__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	// .services-tabs__item
+
+	&__item {
+	}
+
+	// .services-tabs__link
+
+	&__link {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.image-wrapper {
+	// .image-wrapper__decore
+	background-color: #eaf1fb;
+	border-radius: 24px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #93b6ea;
+	flex: 0 0 30%;
+	max-height: 280px;
+	&__decore {
+		width: 24px;
+		height: 24px;
+		background-color: #f5f5f5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		position: absolute;
+		& svg {
+			width: 10px;
+			height: 10px;
+			color: #c9daf4;
+		}
+		// .image-wrapper__decore_top-left
+
+		&_top-left {
+			top: 15px;
+			left: 15px;
+		}
+
+		// .image-wrapper__decore_top-right
+
+		&_top-right {
+			top: 15px;
+			right: 15px;
+		}
+
+		// .image-wrapper__decore_bottom-left
+
+		&_bottom-left {
+			bottom: 15px;
+			left: 15px;
+		}
+
+		// .image-wrapper__decore_bottom-right
+
+		&_bottom-right {
+			bottom: 15px;
+			right: 15px;
+		}
+	}
+
+	// .image-wrapper__main
+
+	&__main {
+		& svg {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}
+.showmore-services-tabs {
+	border: 1px solid #e7e7e9;
+	border-radius: 20px;
+	&._showmore-active &__more::after {
+		transform: rotate(180deg);
+	}
+	&__more {
+		display: flex;
+		padding: 10px;
+		align-items: center;
+		gap: 10px;
+		width: 100%;
+		justify-content: center;
+		color: $primaryColor;
+
+		&::after {
+			content: "";
+			transition: all ease 0.3s;
+			display: block;
+			width: 12px;
+			height: 12px;
+			background: url("@img/icons/arrow.svg") center no-repeat;
+		}
+	}
+}
+
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+	span {
+		&:last-child {
+			display: none;
+		}
+		._showmore-active & {
+			display: none;
+			&:last-child {
+				display: block;
+			}
+		}
+	}
+}

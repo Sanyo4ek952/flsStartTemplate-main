@@ -1,0 +1,12 @@
+// Заголовки, общие БЄМ блоки и прочее...
+.sub-title {
+	font-weight: 300;
+	font-size: toRem(24);
+	@include adaptiveValue("font-size", 24, 20);
+	line-height: 1.4;
+}
+.title {
+	font-weight: 700;
+	font-size: toRem(40);
+	line-height: 1.4;
+}
