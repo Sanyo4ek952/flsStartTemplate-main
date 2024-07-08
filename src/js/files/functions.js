@@ -404,13 +404,14 @@ export function tabs() {
 		if (el.closest('[data-tabs-title]')) {
 			const tabTitle = el.closest('[data-tabs-title]');
 			const tabsBlock = tabTitle.closest('[data-tabs]');
-			// Проверка на ширину экрана
-
+			const myMobile = window.innerWidth < 768; // Проверка на ширину экрана
 			if (!tabsBlock.querySelector('._slide')) {
-				if (isMobile) {
+				if (isMobile && myMobile) {
 					if (tabTitle.classList.contains('_tab-active')) {
 						tabTitle.classList.remove('_tab-active');
-					} else {
+					}
+
+					else {
 						let tabActiveTitle = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
 						tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter(item => item.closest('[data-tabs]') === tabsBlock) : null;
 						tabActiveTitle.length ? tabActiveTitle[0].classList.remove('_tab-active') : null;
@@ -493,17 +494,19 @@ export function showMore() {
 			showMoreContent = Array.from(showMoreContent).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
 			showMoreButton = Array.from(showMoreButton).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
 			const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+			const originalHeight = getOriginalHeight(showMoreContent);
+
 			if (matchMedia.matches || !matchMedia) {
-				if (hiddenHeight < getOriginalHeight(showMoreContent)) {
-					_slideUp(showMoreContent, 0, showMoreBlock.classList.contains('_showmore-active') ? getOriginalHeight(showMoreContent) : hiddenHeight);
-					showMoreButton.hidden = false;
+				if (hiddenHeight < originalHeight) {
+					_slideUp(showMoreContent, 0, showMoreBlock.classList.contains('_showmore-active') ? originalHeight : hiddenHeight);
+					showMoreButton.classList.remove('hidden');
 				} else {
 					_slideDown(showMoreContent, 0, hiddenHeight);
-					showMoreButton.hidden = true;
+					showMoreButton.classList.add('hidden');
 				}
 			} else {
 				_slideDown(showMoreContent, 0, hiddenHeight);
-				showMoreButton.hidden = true;
+				showMoreButton.classList.add('hidden');
 			}
 		}
 		function getHeight(showMoreBlock, showMoreContent) {

@@ -7,6 +7,6 @@
 }
 .title {
 	font-weight: 700;
-	font-size: toRem(40);
+	@include adaptiveValue("font-size", 40, 22);
 	line-height: 1.4;
 }
