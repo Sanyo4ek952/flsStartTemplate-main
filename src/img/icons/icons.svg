@@ -4,7 +4,7 @@
 <path d="M17.9031 31.0126C17.5104 30.631 16.8827 30.64 16.5011 31.0327C16.1194 31.4254 16.1285 32.0532 16.5212 32.4348L24.5878 40.2729L21.2895 43.6673L32.3898 46.4714L29.268 35.4562L25.9697 38.8507L17.9031 31.0126Z" fill="currentColor"/>
 </symbol><symbol viewBox="0 0 80 80" fill="none" id="danger" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#bclip0_1_2950)">
-<rect x="-3.84082" y="17.3726" width="30" height="94" rx="12" transform="rotate(-45 -3.84082 17.3726)" fill="currentColor"/>
+<rect x="-3.84082" y="17.3726" width="30" height="94" rx="12" transform="rotate(-45 -3.84082 17.3726)" fill="black"/>
 <path d="M76 40C76 59.8822 59.8822 76 40 76C20.1178 76 4 59.8822 4 40C4 20.1178 20.1178 4 40 4C59.8822 4 76 20.1178 76 40Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M44.0975 40.0001C44.0975 42.2631 42.2629 44.0977 39.9999 44.0977C37.7369 44.0977 35.9023 42.2631 35.9023 40.0001C35.9023 37.7371 37.7369 35.9025 39.9999 35.9025C42.2629 35.9025 44.0975 37.7371 44.0975 40.0001Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M44.0975 40.0001C44.0975 42.2631 42.2629 44.0977 39.9999 44.0977C37.7369 44.0977 35.9023 42.2631 35.9023 40.0001C35.9023 37.7371 37.7369 35.9025 39.9999 35.9025C42.2629 35.9025 44.0975 37.7371 44.0975 40.0001Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>

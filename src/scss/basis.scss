@@ -31,6 +31,7 @@
 
 	&__animation {
 		position: relative;
+		margin-bottom: toRem(54);
 	}
 
 	// .basis__pie-chart
@@ -101,13 +102,27 @@
 	&__titles-animation {
 		width: 100%;
 		display: flex;
-		height: 100%;
 
-		@media (min-width: $mobile) {
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+			justify-content: space-around;
+			gap: toRem(20);
+			flex-direction: column;
+			align-items: center;
+		}
+
+		@media (min-width: $tablet) {
 			position: absolute;
 			top: 50%;
 			left: 50%;
+			height: 100%;
 			transform: translate(-50%, -50%);
+		}
+		@media (max-width: $tablet) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translate(0, 0);
 		}
 	}
 
@@ -130,6 +145,15 @@
 		border-radius: 20px;
 		border: 1px solid rgba(255, 255, 255, 0.3);
 		background: rgba(255, 255, 255, 0.06);
+		@media (max-width: $tablet) {
+			background: rgba(93, 100, 123, 0.317);
+			color: $secondaryBlackColor;
+			font-weight: 600;
+		}
+		@media (max-width: $tablet) {
+			position: relative;
+			min-height: toRem(40);
+		}
 
 		&:hover {
 			border: 2px solid rgba(255, 255, 255, 0.5);
@@ -142,7 +166,7 @@
 	&__title1 {
 		top: 16%;
 		right: 13%;
-		@media (min-width: $mobile) {
+		@media (max-width: $pc) {
 			right: 0%;
 		}
 	}
@@ -152,7 +176,7 @@
 	&__title2 {
 		bottom: 42%;
 		right: 10%;
-		@media (min-width: $mobile) {
+		@media (max-width: $pc) {
 			right: 0%;
 		}
 	}
@@ -162,7 +186,7 @@
 	&__title3 {
 		bottom: 16%;
 		right: 13%;
-		@media (min-width: $mobile) {
+		@media (max-width: $pc) {
 			right: 0%;
 		}
 	}
@@ -172,7 +196,7 @@
 	&__title4 {
 		bottom: 16%;
 		left: 13%;
-		@media (min-width: $mobile) {
+		@media (max-width: $pc) {
 			left: 0%;
 		}
 	}
@@ -182,7 +206,7 @@
 	&__title5 {
 		bottom: 42%;
 		left: 10%;
-		@media (min-width: $mobile) {
+		@media (max-width: $pc) {
 			left: 0%;
 		}
 	}
@@ -192,15 +216,33 @@
 	&__title6 {
 		top: 16%;
 		left: 13%;
-		@media (min-width: $mobile) {
+		@media (max-width: $pc) {
 			left: 0%;
 		}
 	}
 }
+
 .grid-box-basis {
 	display: grid;
 	grid-template-rows: auto auto;
 	gap: 20px;
+
+	@media (min-width: 901px) {
+		.grid-row-1 {
+			grid-template-columns: minmax(200px, 420px) 1fr minmax(200px, 420px);
+		}
+
+		.grid-row-2 {
+			grid-template-columns: minmax(200px, 500px) minmax(300px, 1fr) minmax(200px, 500px);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.grid-row-1,
+		.grid-row-2 {
+			grid-template-columns: 1fr;
+		}
+	}
 }
 
 .grid-row-1,
@@ -209,50 +251,37 @@
 	gap: 20px;
 }
 
-@media (min-width: 901px) {
-	.grid-row-1 {
-		grid-template-columns: minmax(200px, 420px) 1fr minmax(200px, 420px);
-	}
-
-	.grid-row-2 {
-		grid-template-columns: minmax(200px, 500px) minmax(300px, 1fr) minmax(200px, 500px);
-	}
-}
-
-@media (max-width: 768px) {
-	.grid-row-1,
-	.grid-row-2 {
-		grid-template-columns: 1fr;
-	}
-}
-
 .grid-item {
 	background-color: #fff;
 	padding: toRem(24);
 	border-radius: 20px;
-}
+	display: flex;
+	flex-direction: column;
 
-.grid-item__title {
-	font-size: toRem(20);
-	color: #35353a;
-	line-height: 1.4;
-	margin-bottom: toRem(12);
-}
+	&__title {
+		font-size: toRem(20);
+		color: #35353a;
+		line-height: 1.4;
+		margin-bottom: toRem(12);
+	}
 
-.grid-item__sub-title {
-	color: #a4a4ad;
-	font-size: toRem(14);
-	max-width: toRem(270);
-	line-height: 1.6;
-}
+	&__sub-title {
+		color: #a4a4ad;
+		font-size: toRem(14);
+		max-width: toRem(270);
+		line-height: 1.6;
+		flex: 1 1 auto;
+	}
 
-.grid-item__image {
-	text-align: right;
-}
+	&__image {
+		align-self: flex-end;
 
-.grid-item__image svg {
-	width: 100px;
-	height: 100px;
+		svg {
+			width: 100px;
+			height: 100px;
+			color: $primaryColor;
+		}
+	}
 }
 
 .bold {
