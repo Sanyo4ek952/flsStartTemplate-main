@@ -28,6 +28,7 @@
 
 	&__navigation {
 		background: #f4f7fd;
+		border-radius: 20px;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		@media (max-width: 1050px) {
@@ -96,7 +97,7 @@
 		display: flex;
 		gap: 20px;
 		justify-content: space-between;
-		min-height: 280px;
+		min-height: 100%;
 	}
 
 	// .services-tabs__columns
@@ -108,6 +109,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 		gap: toRem(24);
 		justify-content: space-between;
+		min-height: 248px;
 		@media (max-width: $mobile) {
 			grid-template-columns: repeat(2, 1fr);
 			flex: 1 1 auto;
@@ -173,7 +175,7 @@
 	justify-content: center;
 	color: #93b6ea;
 	flex: 0 0 25%;
-	max-height: 280px;
+	max-height: 100%;
 	&__decore {
 		width: 24px;
 		height: 24px;

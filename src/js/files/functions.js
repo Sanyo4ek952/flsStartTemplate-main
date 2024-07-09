@@ -405,12 +405,15 @@ export function tabs() {
 			const tabTitle = el.closest('[data-tabs-title]');
 			const tabsBlock = tabTitle.closest('[data-tabs]');
 			const myMobile = window.innerWidth < 768; // Проверка на ширину экрана
+			if (tabTitle.classList.contains('_tab-active') && !myMobile) {
+				e.preventDefault();
+				return; // Завершение функции, если заголовок уже активен и ширина экрана 768 и выше
+			}
 			if (!tabsBlock.querySelector('._slide')) {
 				if (isMobile && myMobile) {
 					if (tabTitle.classList.contains('_tab-active')) {
 						tabTitle.classList.remove('_tab-active');
 					}
-
 					else {
 						let tabActiveTitle = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
 						tabActiveTitle.length ? tabActiveTitle = Array.from(tabActiveTitle).filter(item => item.closest('[data-tabs]') === tabsBlock) : null;
