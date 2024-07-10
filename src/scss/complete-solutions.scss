@@ -1,0 +1,63 @@
+.scroll-block {
+	position: relative;
+	overflow: hidden;
+	background-image: url("@img/complete-solutions/bg.png");
+	background-size: contain;
+	background-attachment: fixed; /* Фиксирует фон на месте */
+}
+
+.complete-solutions {
+	@include adaptiveValue("padding-top", 800, 200);
+	@include adaptiveValue("padding-bottom", 800, 200);
+	// .complete-solutions__container
+
+	&__container {
+	}
+
+	// .complete-solutions__body
+
+	&__body {
+		margin: 0 auto;
+		max-width: toRem(782);
+		background-color: #fff;
+		padding: toRem(80) toRem(110);
+		@include adaptiveValue("padding-left", 110, 20);
+		@include adaptiveValue("padding-right", 110, 20);
+		gap: 50px;
+		text-align: center;
+	}
+
+	// .complete-solutions__title
+
+	&__title {
+		@include adaptiveValue("font-size", 40, 30);
+		font-weight: 600;
+		line-height: 1.3;
+		@include adaptiveValue("margin-bottom", 50, 20);
+	}
+
+	// .complete-solutions__text
+
+	&__text {
+		max-width: toRem(564);
+		text-align: center;
+		font-weight: 300;
+		font-size: toRem(20);
+		line-height: 1.6;
+		margin-bottom: toRem(50);
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+
+	// .complete-solutions__button
+
+	&__button {
+		background-color: $primaryColor;
+		margin: 0 auto;
+	}
+}
+.scroll-block {
+}
+.title {
+}
+.button {
+}
