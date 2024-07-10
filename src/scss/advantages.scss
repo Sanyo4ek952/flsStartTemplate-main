@@ -1,0 +1,133 @@
+.advantages {
+	background-color: #f4f7fd;
+	// .advantages__container
+
+	&__container {
+	}
+
+	// .advantages__body
+
+	&__body {
+		padding: toRem(80) toRem(0);
+	}
+
+	// .advantages__title
+
+	&__title {
+		margin-bottom: toRem(60);
+	}
+
+	// .advantages__gid-box
+
+	&__gid-box {
+	}
+}
+.title {
+}
+.gid-box-advantages {
+	display: grid;
+	gap: 20px;
+	min-height: toRem(580);
+	grid-template-columns: repeat(4, 1fr);
+	@media (max-width: $pc) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 1000px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	// .gid-box-advantages__column
+
+	&__column {
+		&_1 {
+			grid-column: span 1;
+			min-width: toRem(500);
+			@include adaptiveValue("min-width", 500, 290);
+			display: grid;
+			gap: 20px;
+			grid-template-rows: 1fr 320px;
+			grid-template-columns: 1fr 1fr;
+			@media (max-width: 500px) {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		&_3,
+		&_4 {
+			grid-column: span 1;
+			display: grid;
+			gap: 20px;
+			grid-template-rows: 1fr 240px;
+		}
+	}
+
+	// .gid-box-advantages__item
+
+	&__item {
+		border-radius: 20px;
+		padding: toRem(24);
+		font-size: toRem(20);
+		line-height: 1.4;
+		&_1,
+		&_2 {
+			grid-column: span 1;
+			min-height: 240px;
+		}
+		&_1 {
+			background: url("@img/advantages/bg-item1.svg") right bottom no-repeat;
+			background-size: contain;
+			background-color: #fff;
+		}
+		&_2 {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			background-color: #c9daf4;
+			& > span {
+				font-size: toRem(36);
+				font-weight: 300;
+				color: #5d91df;
+			}
+		}
+		&_3 {
+			grid-column: 1 / span 2;
+			grid-row: 2;
+			background: url("@img/advantages/bg-item3.svg") center bottom no-repeat;
+			background-size: contain;
+			background-color: #c9daf4;
+			@media (max-width: 500px) {
+				min-height: 240px;
+			}
+		}
+		&_4 {
+			min-height: 100%;
+			background: url("@img/advantages/bg-item4.svg") 0 0 / 100% no-repeat;
+			background-size: 100% 100%;
+			background-color: #ffffff;
+			@media (max-width: 1000px) {
+				min-height: 240px;
+			}
+		}
+		&_5 {
+			min-height: 240px;
+			background: url("@img/advantages/bg-item5.svg") calc(100% - 20px) calc(100% - 20px) no-repeat;
+			background-color: #fedebe;
+		}
+		&_6 {
+			background: url("@img/advantages/bg-item6.svg") right bottom no-repeat;
+			background-color: #276cd3;
+			color: $mainWhiteColor;
+			background-size: contain;
+		}
+		&_7 {
+			min-height: 240px;
+			background: url("@img/advantages/bg-item7.svg") calc(100% - 20px) calc(100% - 20px) no-repeat;
+			background-color: #c9daf4;
+		}
+		&_8 {
+			background: url("@img/advantages/bg-item88.svg") right bottom no-repeat;
+			background-color: #febf7f;
+			background-size: contain;
+		}
+	}
+}
