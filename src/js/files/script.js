@@ -3,7 +3,7 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-
+// Block Advantages animation
 document.querySelectorAll('.basis__title-animation').forEach(title => {
 	title.addEventListener('mouseenter', () => {
 		const sliceClass = title.getAttribute('data-slice');
@@ -65,5 +65,5 @@ document.querySelectorAll('.basis__title-animation').forEach(title => {
 	});
 });
 
-
+// Подключение анимации library
 AOS.init();

@@ -10,3 +10,41 @@
 	@include adaptiveValue("font-size", 40, 22);
 	line-height: 1.4;
 }
+
+// Radio
+.custom-radio-button {
+	position: relative;
+	display: inline-block;
+	margin-right: 10px;
+	@media (max-width: $mobile) {
+		flex: 1 1 auto;
+	}
+	input[type="radio"] {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	label {
+		display: inline-block;
+		padding: toRem(16) toRem(25);
+		border-radius: 20px;
+		cursor: pointer;
+		transition: all ease 0.3s;
+		border: 1px solid #c9daf4;
+		color: #276cd3;
+		text-transform: lowercase;
+		@media (max-width: $mobile) {
+			width: 100%;
+			text-align: center;
+		}
+		&:hover {
+			background-color: #c9daf4;
+		}
+	}
+
+	input[type="radio"]:checked + label {
+		background-color: $primaryColor;
+		color: #fff;
+	}
+}
