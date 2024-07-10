@@ -64,3 +64,6 @@ document.querySelectorAll('.basis__title-animation').forEach(title => {
 		}
 	});
 });
+
+
+AOS.init();
