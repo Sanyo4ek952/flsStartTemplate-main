@@ -23,6 +23,10 @@
 
 	&__image {
 		margin-bottom: toRem(40);
+		width: 100%;
+		& img {
+			width: 100%;
+		}
 	}
 
 	// .stages-of-work__description
