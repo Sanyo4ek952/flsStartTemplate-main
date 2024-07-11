@@ -66,4 +66,54 @@ document.querySelectorAll('.basis__title-animation').forEach(title => {
 });
 
 // Подключение анимации library
-AOS.init();
+// AOS.init();
+
+
+//my code
+document.addEventListener('DOMContentLoaded', function () {
+	const infoBox = document.getElementById('info-box');
+	const groups = document.querySelectorAll('#russia-map g');
+
+	groups.forEach(group => {
+		group.addEventListener('mouseenter', function () {
+			const paths = group.querySelectorAll('path');
+			paths.forEach(path => {
+				path.style.fill = getComputedStyle(group).color;
+			});
+		});
+
+		group.addEventListener('mouseleave', function () {
+			const paths = group.querySelectorAll('path');
+			paths.forEach(path => {
+				path.style.fill = ''; // Возвращаем исходный цвет
+			});
+		});
+
+		group.addEventListener('mouseover', function () {
+			const regionId = this.id;
+			const regionInfo = getRegionInfo(regionId);
+			infoBox.innerHTML = regionInfo;
+			infoBox.style.display = 'block';
+		});
+
+		group.addEventListener('mouseout', function () {
+			infoBox.style.display = 'none';
+		});
+	});
+
+	function getRegionInfo(regionId) {
+		const info = {
+			NorthCaucasusDistrict: '<div class="name-district">Северо-Кавказский округ</div>  <div class="delivery-time"> доставка от 5 дней</div>',
+			SouthernDistrict: '<div class="name-district">Южный округ</div>  <div class="delivery-time"> доставка от 3 дней</div>',
+			CentralDistrict: '<div class="name-district">Центральный округ</div>  <div class="delivery-time"> доставка от 1 дней</div>',
+			PrivolzhskyDistrict: '<div class="name-district">Приволжский округ</div>  <div class="delivery-time"> доставка от 3 дней</div>',
+			UralDistrict: '<div class="name-district">Уральский округ</div>  <div class="delivery-time"> доставка от 5 дней</div>',
+			SiberianDistrict: '<div class="name-district">Сибирский округ</div>  <div class="delivery-time"> доставка от 7 дней</div>',
+			FarEasternDistrict: '<div class="name-district">Дальневосточный округ</div>  <div class="delivery-time"> доставка от 10 дней</div>',
+			NorthWesternDistrict: '<div class="name-district">Северо-западный округ</div>  <div class="delivery-time"> доставка от 1 дней</div>',
+
+			// Добавьте информацию для остальных областей
+		};
+		return info[regionId] || 'Информация не найдена';
+	}
+});
