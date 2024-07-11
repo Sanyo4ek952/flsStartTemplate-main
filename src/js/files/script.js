@@ -66,7 +66,8 @@ document.querySelectorAll('.basis__title-animation').forEach(title => {
 });
 
 // Подключение анимации library
-// AOS.init();
+
+AOS.init();
 
 
 //my code
