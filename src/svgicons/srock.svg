@@ -1,0 +1,20 @@
+<svg width="67.000000" height="67.000000" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip22_17418">
+			<rect id="Frame 2608469" rx="-0.558333" width="65.883331" height="65.883331" transform="translate(0.558333 0.558333)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip22_17418)">
+		<rect id="Rectangle 452" x="-1.222534" y="18.983398" rx="11.166667" width="27.916668" height="70.471802" transform="rotate(-45 -1.222534 18.983398)" fill="#276CD3" fill-opacity="0.100000"/>
+		<rect id="Rectangle 451" x="12.735668" y="15.886719" rx="4.466667" width="42.433334" height="38.271214" stroke="#276CD3" stroke-opacity="1.000000" stroke-width="3.350000"/>
+		<path id="Vector 84" d="M47.13 10.04L47.13 20.45" stroke="#276CD3" stroke-opacity="1.000000" stroke-width="3.350000" stroke-linecap="round"/>
+		<path id="Vector 85" d="M20.77 10.04L20.77 20.45" stroke="#276CD3" stroke-opacity="1.000000" stroke-width="3.350000" stroke-linecap="round"/>
+		<circle id="Ellipse 68" cx="41.582523" cy="40.572266" r="13.586112" stroke="#276CD3" stroke-opacity="1.000000" stroke-width="3.350000"/>
+		<path id="Vector 86" d="M47.35 45.22L41.21 40.75L41.21 32.94" stroke="#276CD3" stroke-opacity="1.000000" stroke-width="3.350000" stroke-linecap="round"/>
+		<path id="Vector 87" d="M28.92 27.35L14.41 27.35L14.41 24L28.92 24C29.86 24 30.6 24.74 30.6 25.68C30.6 26.62 29.86 27.35 28.92 27.35Z" fill="#276CD3" fill-opacity="1.000000" fill-rule="evenodd"/>
+		<path id="Vector 88" d="M23.34 34.05L12.17 34.05L12.17 30.7L23.34 30.7C24.28 30.7 25.01 31.44 25.01 32.38C25.01 33.32 24.28 34.05 23.34 34.05Z" fill="#276CD3" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
